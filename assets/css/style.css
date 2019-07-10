@@ -1,6 +1,11 @@
 .jumbotron {
     text-align: center;
+    color: azure;
+    background-image: url(../images/images.jpg);
 }
-#body {
-    background-image: url("pexels-photo-255379.jpeg");
+body {
+    background-image: url(../images/download.jpg);
+}
+.h1 {
+    font-weight: bold;
 }
