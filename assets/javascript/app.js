@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    // Set counter for 30seconds
-    var counter = 30;
+ 
+    var counter;
     var intervalId;
 
 
@@ -14,6 +14,10 @@ $(document).ready(function () {
 
     }
     function startGame() {
+        $("#game").empty();
+        // Set counter for 30seconds
+        counter = 30;
+        
         $("#start").hide();
         for (var i = 0; i < questions.length; i++) {
             // Display the question in a new paragraph
@@ -40,17 +44,18 @@ $(document).ready(function () {
     }
 
     function decrement() {
+        if(counter >0) {
         counter--;
+        }
         $("#show-number").html("<h2>" + counter + "</h2>");
         if (counter === 0) {
-            stop();
+            clearTimeout();
             alert("Times Up!");
+            run();
         }
 
     }
     var questions = [
-
-
 
         {
             question: "What fast food restaurant is closed on Sundays?",
@@ -61,10 +66,6 @@ $(document).ready(function () {
             },
             correctAnswer: "a"
         },
-
-
-
-
 
         {
             question: "Which fast food restaurant was first to open in the U.S.?",
