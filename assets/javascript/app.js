@@ -30,9 +30,8 @@ $(document).ready(function () {
             // Append it to the page
             $("#game").append(questionP);
             $("#game").append("<label><input type='radio' name='" + i + "' value='" + questions[i].answers.a + "'>" + questions[i].answers.a + "</label>");
-
-            $("#game").append(optionB);
-            $("#game").append(optionC);
+            $("#game").append("<label><input type='radio' name='" + i + "' value='" + questions[i].answers.b + "'>" + questions[i].answers.b + "</label>");
+            $("#game").append("<label><input type='radio' name='" + i + "' value='" + questions[i].answers.c + "'>" + questions[i].answers.c + "</label>");
 
 
 
@@ -50,9 +49,6 @@ $(document).ready(function () {
 
     }
     var questions = [
-
-
-
 
 
 
